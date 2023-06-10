@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212331;
+  overflow: hidden;
+}
+#word {
+  font-size: 64px;
+  font-weight: 300;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.demo-typewriter {
+  color: #262626;
+  overflow: hidden;
+  border-right: 0.1em solid #ff8d8d;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.4rem;
+  animation: demo-typewriter 3s steps(30, end), demo-cursor 1s step-end infinite;
+}
+@keyframes demo-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes demo-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff8d8d;
+  }
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
